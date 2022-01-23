@@ -94,6 +94,7 @@ class BinaryTree {
     return closest;
   }
 
+  // springboard solution for practice and review
   /** Further study!
    * areCousins(node1, node2): determine whether two nodes are cousins
    * (i.e. are at the same level but have different parents. ) */
@@ -188,7 +189,7 @@ class BinaryTree {
    * lowestCommonAncestor(node1, node2): find the lowest common ancestor
    * of two nodes in a binary tree. */
 
-  lowestCommonAncestor(node1, node2, currentNode=this.root) {
+  lowestCommonAncestor(node1, node2, currentNode = this.root) {
     // base case 1: empty tree
     if (currentNode === null) return null;
 
@@ -203,10 +204,10 @@ class BinaryTree {
 
     // if neither left nor right is null, currentNode is the ancestor
     if (left !== null && right !== null) return currentNode;
-    
+
     // if one node is not null, return it
     if (left !== null || right !== null) return left || right;
-    
+
     // left and right are both null, return null
     if (left === null && right === null) return null;
   }
